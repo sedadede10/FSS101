@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+    body{
+        background-color: rgb(227, 211, 242);
+    }
+    img {
+    border: 5px solid #ffffff; 
+    }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center my-3">Resim Galerisi</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card" >
+                    <img src="1.jpg" class="card-img-top" alt="Bank" data-bs-toggle="modal" data-bs-target="#resimDetay">
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="2.jpg" class="card-img-top" alt="Çimen" data-bs-toggle="modal" data-bs-target="#resimDetay">
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="3.jpg" class="card-img-top" alt="Varil" data-bs-toggle="modal" data-bs-target="#resimDetay">
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="4.jpg" class="card-img-top" alt="Diken" data-bs-toggle="modal" data-bs-target="#resimDetay">
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="5.jpg" class="card-img-top" alt="Bilgisaray Parçaları" data-bs-toggle="modal" data-bs-target="#resimDetay">
+                  </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="6.jpg" class="card-img-top" alt="Manzara" data-bs-toggle="modal" data-bs-target="#resimDetay">
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resimDetay" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <img id="modal-image" src="" class="card-img-top" alt="Manzara">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        document.querySelectorAll(".card img").forEach(el => {
+            el.addEventListener('click', () => {
+                let src = el.getAttribute("src");
+    
+                let modalImage = document.getElementById("modal-image");
+                modalImage.setAttribute("src", src);
+            });
+        });
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
